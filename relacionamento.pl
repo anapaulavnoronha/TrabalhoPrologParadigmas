@@ -1,21 +1,22 @@
-pessoa(nome,sexo,idade,profissao,cep,generoFilmePreferido,
-estiloMusicalPreferido, temFilhos).
+/*pessoa(Nome,Sexo,Idade,Profissao,Cep,GeneroFilmePreferido,
+EstiloMusicalPreferido, TemFilhos).
 
-endereco(cep,estado,cidade,bairro).
+endereco(Cep,Estado,Cidade,Bairro).*/
 
-pessoa(Fernanda, f, 24, jornalista, 70000, terror, samba, nao).
-pessoa(Maria, f, 46, advogado, 70001, comedia, rock, sim).
-pessoa(Eduardo, m, 32, professor, 70002, terror, jazz, nao).
-pessoa(Pedro, m, 21, jornalista, 70003, drama, rock, nao).
-pessoa(Camila, f, 34, engenheiro_civil, 70000, comedia, pop, sim).
-pessoa(Felipe, m, 51, fotografo, Brasilia, 70005, comedia, axe, sim).
+
+pessoa(fernanda, f, 24, jornalista, 70000, terror, samba, nao).
+pessoa(maria, f, 46, advogado, 70001, comedia, rock, sim).
+pessoa(eduardo, m, 32, professor, 70002, terror, jazz, nao).
+pessoa(pedro, m, 21, jornalista, 70003, drama, rock, nao).
+pessoa(camila, f, 34, engenheiro_civil, 70000, comedia, pop, sim).
+pessoa(felipe, m, 51, fotografo, Brasilia, 70005, comedia, axe, sim).
  
-endereco(70000,Distrito_Federal,Brasilia,Asa_Sul).
-endereco(70001,Distrito_Federal,Brasilia,Sudoeste).
-endereco(70002,Distrito_Federal,Brasilia,Lago_Norte).
-endereco(70003,Sao_Paulo,Sao_Paulo,Morumbi).
-endereco(70004,Distrito_Federal,Brasilia,Asa_Norte).
-endereco(70005,Distrito_Federal,Brasilia,Lago_Sul).
+endereco(70000,distrito_Federal,brasilia,asa_Sul).
+endereco(70001,distrito_Federal,brasilia,sudoeste).
+endereco(70002,distrito_Federal,brasilia,lago_Norte).
+endereco(70003,sao_Paulo,sao_Paulo,morumbi).
+endereco(70004,distrito_Federal,brasilia,asa_Norte).
+endereco(70005,distrito_Federal,brasilia,lago_Sul).
 
 /* seria o inicio do nosso template pra fazer uma aplicacao
 como se fosse um site de relacionamento. Coloquei alguns atributos
