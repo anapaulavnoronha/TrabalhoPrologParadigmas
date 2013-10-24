@@ -11,6 +11,8 @@ pessoa(camila, f, hetero, 34, engenheiro_civil, brasilia, comedia, pop).
 pessoa(felipe, m, hetero, 51, fotografo, brasilia, comedia, axe).
 
 
+/* Regra para orientação sexual */
+
 ifThenElse(X, Y, _) :- X, !, Y.
 ifThenElse(_,_,OpcaoSexual) :- OpcaoSexual.
 
@@ -19,10 +21,14 @@ casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,Gen
 	            ,pessoa(NomeY,SexoY,OpcaoSexual,IdadeY,ProfissaoY,CidadeY,GeneroFilmeY,EstiloMusicalY)
 		    ,NomeX \= NomeY, ifThenElse(OpcaoSexual = homo, SexoX = SexoY, SexoX\=SexoY).
 
+/* Regra para cidade */
 casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,GeneroFilmeX,EstiloMusicalX)
 	            ,pessoa(NomeY,SexoY,OpcaoSexual,IdadeY,ProfissaoY,CidadeX,GeneroFilmeY,EstiloMusicalY)
 		    ,NomeX \= NomeY, ifThenElse(OpcaoSexual = homo, SexoX = SexoY, SexoX\=SexoY).
 
+
+
+/* Regra para idade */
 
 idade(IdadeX,IdadeY) :- (IdadeX-IdadeY)=<7 , (IdadeY-IdadeX)=<7.
 
