@@ -19,8 +19,11 @@ endereco(70000,distrito_Federal,brasilia,asa_Sul).
 endereco(70004,distrito_Federal,brasilia,asa_Norte).
 endereco(70001,distrito_Federal,brasilia,lago_Sul).
 
+ifThenElse(X, Y, _) :- X, !, Y.
+ifThenElse(_,_,Z) :- Z.
 
-casal(X,Y):-pessoa(X,A,B,C,D,E,F,G,Z),pessoa(Y,L,M,N,D,P,Q,R,Z).
+
+casal(X,Y):-pessoa(X,A,B,C,D,E,F,G,Z),pessoa(Y,L,M,N,J,P,Q,R,Z), X \= Y, ifThenElse(Z = homo, A = L, A\=L).
 
 
 /* seria o inicio do nosso template pra fazer uma aplicacao
