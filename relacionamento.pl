@@ -21,13 +21,18 @@ endereco(70001,distrito_Federal,brasilia,lago_Sul).
 */
 
 
-ifThenElse(NomeX, NomeY, _) :- NomeX, !, NomeY.
+ifThenElse(X, Y, _) :- X, !, Y.
 ifThenElse(_,_,OpcaoSexual) :- OpcaoSexual.
 
 
 casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,GeneroFilmeX,EstiloMusicalX)
 	            ,pessoa(NomeY,SexoY,OpcaoSexual,IdadeY,ProfissaoY,CidadeY,GeneroFilmeY,EstiloMusicalY)
 		    ,NomeX \= NomeY, ifThenElse(OpcaoSexual = homo, SexoX = SexoY, SexoX\=SexoY).
+
+casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,GeneroFilmeX,EstiloMusicalX)
+	            ,pessoa(NomeY,SexoY,OpcaoSexual,IdadeY,ProfissaoY,CidadeX,GeneroFilmeY,EstiloMusicalY)
+		    ,NomeX \= NomeY, ifThenElse(OpcaoSexual = homo, SexoX = SexoY, SexoX\=SexoY).
+
 
 
 /* seria o inicio do nosso template pra fazer uma aplicacao
