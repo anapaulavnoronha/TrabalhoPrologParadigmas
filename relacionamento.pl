@@ -69,8 +69,8 @@ gostosFilmes(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,Filme1,Filme2,_,_,_,_), pes
 
 /*Regra geral para criar um casal*/
 
-casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,GeneroFilmeX,EstiloMusicalX,Gosto1, Gosto2, Gosto3, Gosto4)
-	            ,pessoa(NomeY,SexoY,OpcaoSexual,IdadeY,ProfissaoY,CidadeX,GeneroFilmeY,EstiloMusicalY,Gosto1, Gosto2, Gosto3, Gosto4)
+casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,Filme1,Filme2,EstiloMusicalX,Gosto1, Gosto2, Gosto3, Gosto4)
+	            ,pessoa(NomeY,SexoY,OpcaoSexual,IdadeY,ProfissaoY,CidadeX,Filme1,Filme2,EstiloMusicalY,Gosto1, Gosto2, Gosto3, Gosto4)
 		    ,NomeX \= NomeY, 
 		    ifThenElse(OpcaoSexual = homo, SexoX = SexoY, SexoX\=SexoY), 
 		    idade(IdadeX, IdadeY),
