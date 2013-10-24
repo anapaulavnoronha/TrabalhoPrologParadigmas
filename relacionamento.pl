@@ -28,11 +28,11 @@ EstiloMusicalPreferido, TemFilhos, Gosto1, Gosto2, Gosto3, Gosto4).
 
 
 /*BASE DE DADOS*/
-pessoa(fernanda, f, hetero, 24, jornalista, brasilia, terror,suspense, samba, esporte, cinema, seriados, festa).
+pessoa(fernanda, f, hetero, 24, jornalista, brasilia, terror, suspense, samba, esporte, cinema, seriados, festa).
 pessoa(maria, f, hetero, 46, advogado, salvador, comedia, acao, rock, cinema, danca, trabalho, culinaria).
 pessoa(eduardo, m, hetero, 25, professor, brasilia, terror, suspense, jazz, esporte, cinema, seriados, festa).
 pessoa(pedro, m, homo, 21, jornalista, salvador, drama, terror, rock, seriados, danca, esporte, festa).
-pessoa(camila, f, hetero, 34, engenheiro_civil, brasilia, ficcao,comedia, pop, trabalho, musica, estudo, cinema).
+pessoa(camila, f, hetero, 34, engenheiro_civil, brasilia, ficcao, comedia, pop, trabalho, musica, estudo, cinema).
 pessoa(felipe, m, hetero, 51, fotografo, brasilia, ficcao, comedia, axe, musica, seriado, festa, cinema).
 
 
