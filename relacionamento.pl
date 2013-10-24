@@ -1,7 +1,6 @@
 /*pessoa(Nome,Sexo,OpcaoSexual,Idade,Profissao,Cep,GeneroFilmePreferido,
 EstiloMusicalPreferido, TemFilhos).
-
-endereco(Cep,Estado,Cidade,Bairro).*/
+*/
 
 
 pessoa(fernanda, f, hetero, 24, jornalista, brasilia, terror, samba, nao).
@@ -10,15 +9,6 @@ pessoa(eduardo, m, homo, 32, professor, brasilia, terror, jazz, nao).
 pessoa(pedro, m, homo, 21, jornalista, salvador, drama, rock, nao).
 pessoa(camila, f, hetero, 34, engenheiro_civil, brasilia, comedia, pop, sim).
 pessoa(felipe, m, hetero, 51, fotografo, brasilia, comedia, axe, sim).
-
-/*
-endereco(70000,distrito_Federal,brasilia,asa_Sul).
-endereco(70001,distrito_Federal,brasilia,lago_Sul).
-endereco(70002,distrito_Federal,brasilia,lago_Norte).
-endereco(70000,distrito_Federal,brasilia,asa_Sul).
-endereco(70004,distrito_Federal,brasilia,asa_Norte).
-endereco(70001,distrito_Federal,brasilia,lago_Sul).
-*/
 
 
 ifThenElse(X, Y, _) :- X, !, Y.
