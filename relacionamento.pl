@@ -1,4 +1,4 @@
-/*pessoa(Nome,Sexo,OpcaoSexual,Idade,Profissao,Cep,GeneroFilmePreferido,
+/*pessoa(Nome,Sexo,OpcaoSexual,Idade,Profissao,Cep,Filme1,Filme2,
 EstiloMusicalPreferido, TemFilhos, Gosto1, Gosto2, Gosto3, Gosto4).
 */
 
@@ -15,15 +15,25 @@ EstiloMusicalPreferido, TemFilhos, Gosto1, Gosto2, Gosto3, Gosto4).
 	-Culinaria
 */
 
+/*Definição de opçoes a serem escolhidas como pereferência de FILMES, cada usuário deve escolher as 2 favoritas:
+	-Terror
+	-Comedia
+	-Ficcao
+	-Suspense
+	-Drama
+	-Aventura
+	-Acao
+*/
+
 
 
 /*BASE DE DADOS*/
-pessoa(fernanda, f, hetero, 24, jornalista, brasilia, terror, samba, esporte, cinema, seriados, festa).
-pessoa(maria, f, hetero, 46, advogado, salvador, comedia, rock, cinema, danca, trabalho, culinaria).
-pessoa(eduardo, m, hetero, 25, professor, brasilia, terror, jazz, esporte, cinema, seriados, festa).
-pessoa(pedro, m, homo, 21, jornalista, salvador, drama, rock, seriados, danca, esporte, festa).
-pessoa(camila, f, hetero, 34, engenheiro_civil, brasilia, comedia, pop, trabalho, musica, estudo, cinema).
-pessoa(felipe, m, hetero, 51, fotografo, brasilia, comedia, axe, musica, seriado, festa, cinema).
+pessoa(fernanda, f, hetero, 24, jornalista, brasilia, terror,suspense, samba, esporte, cinema, seriados, festa).
+pessoa(maria, f, hetero, 46, advogado, salvador, comedia, acao, rock, cinema, danca, trabalho, culinaria).
+pessoa(eduardo, m, hetero, 25, professor, brasilia, terror, suspense, jazz, esporte, cinema, seriados, festa).
+pessoa(pedro, m, homo, 21, jornalista, salvador, drama, terror, rock, seriados, danca, esporte, festa).
+pessoa(camila, f, hetero, 34, engenheiro_civil, brasilia, ficcao,comedia, pop, trabalho, musica, estudo, cinema).
+pessoa(felipe, m, hetero, 51, fotografo, brasilia, ficcao, comedia, axe, musica, seriado, festa, cinema).
 
 
 
@@ -50,6 +60,12 @@ gostos(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,_,_,Gosto1,Gosto2,Gosto3,Gosto4),
 			(Gosto4 = Gosto5; Gosto4 = Gosto6; Gosto4 = Gosto7; Gosto4 = Gosto8).
 
 
+/* Regra para comparar gêneros de filmes favoritos (Para as pessoas serem compativeis, os 2 gostos de filmes devem ser iguais)
+
+gostosFilmes(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,Filme1,Filme2,_,_,_,_), pessoa(NomeX,_,_,_,_,_,Filme3,Filme4,_,_,_,_), 
+			     (Filme1 = Filme3; Filme1 = Filme4),
+			     (Filme2 = Filme3; Filme2 = Filme4).
+
 
 /*Regra geral para criar um casal*/
 
@@ -58,13 +74,5 @@ casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,Gen
 		    ,NomeX \= NomeY, 
 		    ifThenElse(OpcaoSexual = homo, SexoX = SexoY, SexoX\=SexoY), 
 		    idade(IdadeX, IdadeY),
-		    gostos(NomeX, NomeY).
-
-
-
-
-/* seria o inicio do nosso template pra fazer uma aplicacao
-como se fosse um site de relacionamento. Coloquei alguns atributos
-mas podem ter mais. A gente teria varias regras, por exemplo a idade,
-a proximidade do bairro das pessoas e etc. Além disso teria a prioridade
-determinado atributo é mais importante que outros, ideias? */
+		    gostos(NomeX, NomeY),
+		    gostosFilmes(NomeX, NomeY).
