@@ -1,15 +1,15 @@
-/*pessoa(Nome,Sexo,Idade,Profissao,Cep,GeneroFilmePreferido,
-EstiloMusicalPreferido, TemFilhos, opcaoSexual).
+/*pessoa(Nome,Sexo,OpcaoSexual,Idade,Profissao,Cep,GeneroFilmePreferido,
+EstiloMusicalPreferido, TemFilhos).
 
 endereco(Cep,Estado,Cidade,Bairro).*/
 
 
-pessoa(fernanda, f, 24, jornalista, 70000, terror, samba, nao, hetero).
-pessoa(maria, f, 46, advogado, 70001, comedia, rock, sim, hetero).
-pessoa(eduardo, m, 32, professor, 70002, terror, jazz, nao, homo).
-pessoa(pedro, m, 21, jornalista, 70000, drama, rock, nao, homo).
-pessoa(camila, f, 34, engenheiro_civil, 70000, comedia, pop, sim, hetero).
-pessoa(felipe, m, 51, fotografo, 70001, comedia, axe, sim, hetero).
+pessoa(fernanda, f, hetero, 24, jornalista, 70000, terror, samba, nao).
+pessoa(maria, f, hetero, 46, advogado, 70001, comedia, rock, sim).
+pessoa(eduardo, m, homo, 32, professor, 70002, terror, jazz, nao).
+pessoa(pedro, m, homo, 21, jornalista, 70000, drama, rock, nao).
+pessoa(camila, f, hetero, 34, engenheiro_civil, 70000, comedia, pop, sim).
+pessoa(felipe, m, hetero, 51, fotografo, 70001, comedia, axe, sim).
 
 
 endereco(70000,distrito_Federal,brasilia,asa_Sul).
@@ -19,11 +19,13 @@ endereco(70000,distrito_Federal,brasilia,asa_Sul).
 endereco(70004,distrito_Federal,brasilia,asa_Norte).
 endereco(70001,distrito_Federal,brasilia,lago_Sul).
 
-ifThenElse(X, Y, _) :- X, !, Y.
-ifThenElse(_,_,Z) :- Z.
+ifThenElse(NomeX, NomeY, _) :- NomeX, !, NomeY.
+ifThenElse(_,_,OpcaoSexual) :- OpcaoSexual.
 
 
-casal(X,Y):-pessoa(X,A,B,C,D,E,F,G,Z),pessoa(Y,L,M,N,J,P,Q,R,Z), X \= Y, ifThenElse(Z = homo, A = L, A\=L).
+casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CepX,GeneroFilmeX,EstiloMusicalX)
+	            ,pessoa(NomeY,SexoY,OpcaoSexual,IdadeY,ProfissaoY,CepY,GeneroFilmeY,EstiloMusicalY)
+		    ,NomeX \= NomeY, ifThenElse(OpcaoSexual = homo, SexoX = SexoY, SexoX\=SexoY).
 
 
 /* seria o inicio do nosso template pra fazer uma aplicacao
