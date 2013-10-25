@@ -87,3 +87,4 @@ casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,Fil
 		    idade(IdadeX, IdadeY),
 		    gostos(NomeX, NomeY),
 		    gostosFilmes(NomeX, NomeY).
+		    gostoMusical(NomeX, NomeY).
