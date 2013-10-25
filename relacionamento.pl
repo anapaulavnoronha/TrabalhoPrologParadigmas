@@ -101,17 +101,14 @@ gostoMusical(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,_,_,EstiloMusicalX,_,_,_,_)
 
 /*Regra geral para criar um casal*/
 
-casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,Filme1,Filme2,EstiloMusicalX,Gosto1, Gosto2, Gosto3, Gosto4)
+casal():-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,Filme1,Filme2,EstiloMusicalX,Gosto1, Gosto2, Gosto3, Gosto4)
 	            ,pessoa(NomeY,SexoY,OpcaoSexual,IdadeY,ProfissaoY,CidadeX,Filme1,Filme2,EstiloMusicalY,Gosto1, Gosto2, Gosto3, Gosto4)
 		    ,NomeX \= NomeY, 
 		    ifThenElse(OpcaoSexual = homo, SexoX = SexoY, SexoX\=SexoY), 
 		    idade(IdadeX, IdadeY),
 		    gostos(NomeX, NomeY),
 		    gostosFilmes(NomeX, NomeY),
-		    gostoMusical(NomeX, NomeY).
+		    gostoMusical(NomeX, NomeY),
+		    write(NomeX), write(' eh compativel com '), write(NomeY),nl,fail.
 
-
-/*write(NomeX), write(' eh compativel com '), write(NomeY),nl,fail.*/
-                    
-                    
 
