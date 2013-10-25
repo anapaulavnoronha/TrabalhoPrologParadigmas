@@ -1,6 +1,4 @@
-/*pessoa(Nome,Sexo,OpcaoSexual,Idade,Profissao,Cep,Filme1,Filme2,
-EstiloMusicalPreferido, TemFilhos, Gosto1, Gosto2, Gosto3, Gosto4).
-*/
+/*pessoa(Nome,Sexo,OpcaoSexual,Idade,Profissao,Cep,Filme1,Filme2,EstiloMusicalPreferido, TemFilhos, Gosto1, Gosto2, Gosto3, Gosto4).*/
 
 
 /*Definição de opçoes a serem escolhidas como gosto, cada usuário deve escolher as 4 favoritas:
@@ -25,6 +23,14 @@ EstiloMusicalPreferido, TemFilhos, Gosto1, Gosto2, Gosto3, Gosto4).
 	-Acao
 */
 
+/*Definição de opçoes a serem escolhidas como pereferência de Gênero Musical, cada usuário deve escolher a favorita:
+	-Rock
+	-Pop
+	-Samba
+	-Jazz
+	-Funk
+	-Eletrônico
+*/
 
 
 /*BASE DE DADOS*/
@@ -33,7 +39,7 @@ pessoa(maria, f, hetero, 46, advogado, salvador, comedia, acao, rock, cinema, da
 pessoa(eduardo, m, hetero, 25, professor, brasilia, terror, suspense, jazz, esporte, cinema, seriados, festa).
 pessoa(pedro, m, homo, 21, jornalista, salvador, drama, terror, rock, seriados, danca, esporte, festa).
 pessoa(camila, f, hetero, 34, engenheiro_civil, brasilia, ficcao, comedia, pop, trabalho, musica, estudo, cinema).
-pessoa(felipe, m, hetero, 51, fotografo, brasilia, ficcao, comedia, axe, musica, seriado, festa, cinema).
+pessoa(felipe, m, hetero, 51, fotografo, brasilia, ficcao, comedia, funk, musica, seriado, festa, cinema).
 
 
 
@@ -65,6 +71,11 @@ gostos(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,_,_,Gosto1,Gosto2,Gosto3,Gosto4),
 gostosFilmes(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,Filme1,Filme2,_,_,_,_), pessoa(NomeX,_,_,_,_,_,Filme3,Filme4,_,_,_,_), 
 			     (Filme1 = Filme3; Filme1 = Filme4),
 			     (Filme2 = Filme3; Filme2 = Filme4).
+
+/* Regra para comparar gêneros musical favorito (Para as pessoas serem compativeis, o gosto musical deve ser igual)
+
+gostoMusical(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,EstiloMusicalX,_,_,_,_,_,_), pessoa(NomeX,_,_,_,_,EstiloMusicalY,_,_,_,_,_,_), 
+			     (EstiloMusicalX = EstiloMusicalY).
 
 
 /*Regra geral para criar um casal*/
