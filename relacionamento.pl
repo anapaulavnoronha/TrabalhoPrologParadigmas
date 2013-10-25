@@ -52,6 +52,18 @@ pessoa(anderson, m, hetero, 38, lutador, curitiba, acao, comedia, pop, musica, e
 pessoa(joana, m, hetero, 33, professora, curitiba, acao, comedia, pop, musica, esporte, trabalho, cinema).
 pessoa(ronaldo, m, hetero, 33, futebolista, beloHorizonte, acao, comedia, funk, musica, esporte, festa, trabalho).
 pessoa(jessica, f, hetero, 34, escritora, beloHorizonte, acao, comedia, funk, musica, esporte, festa, trabalho).
+pessoa(leandro, m, hetero, 37, medico, curitiba, comedia, acao, pop, esporte, musica, cinema, trabalho).
+pessoa(fabiana, f, homo, 22, jornalista, brasilia, ficcao, comedia, rock, musica, esporte, culinaria, trabalho). 
+pessoa(eduarda, f, hetero, 41, desempregada, brasilia, comedia, terror, jazz, seriados, festa, culinaria, cinema).
+pessoa(mariana, f, homo, 21, professora, brasilia, ficcao, comedia, rock, musica, esporte, culinaria, trabalho).
+pessoa(igor, m, hetero, 44, medico, brasilia, comedia, terror, jazz, seriados, festa, culinaria, cinema).
+pessoa(gabriel, m, hetero, 48, pedreiro, salvador, comedia, acao, rock, cinema, danca, trabalho, culinaria).
+pessoa(gustavo, m, homo, 35, musico, brasilia, terror, comedia, eletronico, musica, esporte, culinaria, cinema).
+pessoa(paloma, f, hetero, 54, jardineira, brasilia, ficcao, comedia, funk, musica, seriado, cinema, festa).
+pessoa(danilo, m, hetero, 18, estudante, brasilia, drama, aventura, samba, estudos, festa, cinema, esporte).
+pessoa(carolina, f, hetero, 21, estudante, brasilia, aventura, drama, samba, estudos, cinema, esporte, festa).
+
+
 
 
 /* Criação  de uma regra IF THEN ELSE */
