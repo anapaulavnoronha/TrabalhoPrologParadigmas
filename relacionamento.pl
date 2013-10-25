@@ -40,6 +40,21 @@ pessoa(eduardo, m, hetero, 25, professor, brasilia, terror, suspense, jazz, espo
 pessoa(pedro, m, homo, 21, jornalista, salvador, drama, terror, rock, seriados, danca, esporte, festa).
 pessoa(camila, f, hetero, 34, engenheiro_civil, brasilia, ficcao, comedia, pop, trabalho, musica, estudo, cinema).
 pessoa(felipe, m, hetero, 51, fotografo, brasilia, ficcao, comedia, funk, musica, seriado, festa, cinema).
+pessoa(matheus, m, hetero, 23, programador, brasilia, ficcao, suspense, rock, musica, seriado, festa, cinema).
+pessoa(louize, f, hetero, 23, estudante, brasilia, ficcao, suspense, rock, musica, seriado, festa, cinema).
+pessoa(guilherme, m, homo, 21, engenheiro, brasilia, terror, comedia, eletronico, musica, esporte, culinaria, cinema).
+pessoa(joao, m, homo, 32, garcom, brasilia, terror, comedia, eletronico, musica, esporte, culinaria, cinema).
+pessoa(sofia, f, hetero, 33, filosofa, curitiba, drama, comedia, jazz, musica, trabalho, estudos, culinaria).
+pessoa(fernando, m, hetero, 35, desempregado, curitiba, drama, comedia, jazz, musica, trabalho, estudos, culinaria).
+pessoa(paul, m, hetero, 71, musico, liverpool, drama, comedia, rock, musica, estudos, festa, trabalho).
+pessoa(janis, f, hetero, 70, musico, miami, ficcao, comedia, rock, musica, seriado, festa, cinema).
+pessoa(anderson, m, hetero, 38, lutador, curitiba, acao, comedia, pop, musica, esporte, trabalho, cinema).
+pessoa(joana, m, hetero, 33, professora, curitiba, acao, comedia, pop, musica, esporte, trabalho, cinema).
+pessoa(ronaldo, m, hetero, 33, futebolista, beloHorizonte, acao, comedia, funk, musica, esporte, festa, trabalho).
+pessoa(jessica, f, hetero, 34, escritora, beloHorizonte, acao, comedia, funk, musica, esporte, festa, trabalho).
+
+
+
 
 
 
