@@ -86,5 +86,5 @@ casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,Fil
 		    ifThenElse(OpcaoSexual = homo, SexoX = SexoY, SexoX\=SexoY), 
 		    idade(IdadeX, IdadeY),
 		    gostos(NomeX, NomeY),
-		    gostosFilmes(NomeX, NomeY).
+		    gostosFilmes(NomeX, NomeY),
 		    gostoMusical(NomeX, NomeY).
