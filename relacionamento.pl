@@ -66,13 +66,13 @@ gostos(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,_,_,Gosto1,Gosto2,Gosto3,Gosto4),
 			(Gosto4 = Gosto5; Gosto4 = Gosto6; Gosto4 = Gosto7; Gosto4 = Gosto8).
 
 
-/* Regra para comparar gêneros de filmes favoritos (Para as pessoas serem compativeis, os 2 gostos de filmes devem ser iguais)
+/* Regra para comparar gêneros de filmes favoritos (Para as pessoas serem compativeis, os 2 gostos de filmes devem ser iguais) */
 
 gostosFilmes(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,Filme1,Filme2,_,_,_,_), pessoa(NomeX,_,_,_,_,_,Filme3,Filme4,_,_,_,_), 
 			     (Filme1 = Filme3; Filme1 = Filme4),
 			     (Filme2 = Filme3; Filme2 = Filme4).
 
-/* Regra para comparar gêneros musical favorito (Para as pessoas serem compativeis, o gosto musical deve ser igual)
+/* Regra para comparar gêneros musical favorito (Para as pessoas serem compativeis, o gosto musical deve ser igual) */
 
 gostoMusical(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,EstiloMusicalX,_,_,_,_,_,_), pessoa(NomeX,_,_,_,_,EstiloMusicalY,_,_,_,_,_,_), 
 			     (EstiloMusicalX = EstiloMusicalY).
