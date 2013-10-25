@@ -1,4 +1,4 @@
-/*pessoa(Nome,Sexo,OpcaoSexual,Idade,Profissao,Cep,Filme1,Filme2,EstiloMusicalPreferido, TemFilhos, Gosto1, Gosto2, Gosto3, Gosto4).*/
+/*pessoa(Nome,Sexo,OpcaoSexual,Idade,Profissao,Cidade,Filme1,Filme2,EstiloMusicalPreferido, Gosto1, Gosto2, Gosto3, Gosto4).*/
 
 
 /*Definição de opçoes a serem escolhidas como gosto, cada usuário deve escolher as 4 favoritas:
@@ -54,11 +54,6 @@ pessoa(ronaldo, m, hetero, 33, futebolista, beloHorizonte, acao, comedia, funk, 
 pessoa(jessica, f, hetero, 34, escritora, beloHorizonte, acao, comedia, funk, musica, esporte, festa, trabalho).
 
 
-
-
-
-
-
 /* Criação  de uma regra IF THEN ELSE */
 
 ifThenElse(IF, THEN, _) :- IF, !, THEN.
@@ -70,11 +65,9 @@ ifThenElse(_,_,ELSE) :- ELSE.
 idade(IdadeX,IdadeY) :- (IdadeX-IdadeY)=<7 , (IdadeY-IdadeX)=<7.
 
 
-
-
 /*Regra para comparar gostos(Para as pessoas serem compativeis, todos os gostos devem ser iguais)*/
 
-gostos(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,_,_,Gosto1,Gosto2,Gosto3,Gosto4), pessoa(NomeY,_,_,_,_,_,_,_,Gosto5,Gosto6,Gosto7,Gosto8), 
+gostos(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,_,_,_,Gosto1,Gosto2,Gosto3,Gosto4), pessoa(NomeY,_,_,_,_,_,_,_,_,Gosto5,Gosto6,Gosto7,Gosto8), 
 			(Gosto1 = Gosto5; Gosto1 = Gosto6; Gosto1 = Gosto7; Gosto1 = Gosto8),
 			(Gosto2 = Gosto5; Gosto2 = Gosto6; Gosto2 = Gosto7; Gosto2 = Gosto8),
 			(Gosto3 = Gosto5; Gosto3 = Gosto6; Gosto3 = Gosto7; Gosto3 = Gosto8),
@@ -83,13 +76,14 @@ gostos(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,_,_,Gosto1,Gosto2,Gosto3,Gosto4),
 
 /* Regra para comparar gêneros de filmes favoritos (Para as pessoas serem compativeis, os 2 gostos de filmes devem ser iguais) */
 
-gostosFilmes(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,Filme1,Filme2,_,_,_,_), pessoa(NomeX,_,_,_,_,_,Filme3,Filme4,_,_,_,_), 
+gostosFilmes(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,Filme1,Filme2,_,_,_,_,_), pessoa(NomeX,_,_,_,_,_,Filme3,Filme4,_,_,_,_,_), 
 			     (Filme1 = Filme3; Filme1 = Filme4),
 			     (Filme2 = Filme3; Filme2 = Filme4).
 
+
 /* Regra para comparar gêneros musical favorito (Para as pessoas serem compativeis, o gosto musical deve ser igual) */
 
-gostoMusical(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,EstiloMusicalX,_,_,_,_,_,_), pessoa(NomeX,_,_,_,_,EstiloMusicalY,_,_,_,_,_,_), 
+gostoMusical(NomeX, NomeY) :- pessoa(NomeX,_,_,_,_,_,_,_,EstiloMusicalX,_,_,_,_), pessoa(NomeX,_,_,_,_,_,_,_,EstiloMusicalY,_,_,_,_), 
 			     (EstiloMusicalX = EstiloMusicalY).
 
 
@@ -103,3 +97,4 @@ casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,Fil
 		    gostos(NomeX, NomeY),
 		    gostosFilmes(NomeX, NomeY),
 		    gostoMusical(NomeX, NomeY).
+
