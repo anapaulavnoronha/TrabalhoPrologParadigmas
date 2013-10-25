@@ -110,3 +110,8 @@ casal(NomeX,NomeY):-pessoa(NomeX,SexoX,OpcaoSexual,IdadeX,ProfissaoX,CidadeX,Fil
 		    gostosFilmes(NomeX, NomeY),
 		    gostoMusical(NomeX, NomeY).
 
+
+/*write(NomeX), write(' eh compativel com '), write(NomeY),nl,fail.*/
+                    
+                    
+
